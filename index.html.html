@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='8' fill='%23333'/><rect x='18' y='18' width='64' height='20' rx='3' fill='%23eee'/><text x='50' y='33' font-family='monospace' font-size='12' text-anchor='end' fill='%23333'>0</text><rect x='18' y='44' width='14' height='12' rx='2' fill='%23555'/><rect x='36' y='44' width='14' height='12' rx='2' fill='%23555'/><rect x='54' y='44' width='14' height='12' rx='2' fill='%23555'/><rect x='72' y='44' width='14' height='12' rx='2' fill='%23e67e22'/><rect x='18' y='60' width='14' height='12' rx='2' fill='%23555'/><rect x='36' y='60' width='14' height='12' rx='2' fill='%23555'/><rect x='54' y='60' width='14' height='12' rx='2' fill='%23555'/><rect x='72' y='60' width='14' height='12' rx='2' fill='%23e67e22'/><rect x='18' y='76' width='14' height='12' rx='2' fill='%23555'/><rect x='36' y='76' width='14' height='12' rx='2' fill='%23555'/><rect x='54' y='76' width='14' height='12' rx='2' fill='%23555'/><rect x='72' y='76' width='28' height='12' rx='2' fill='%2327ae60'/></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" oninput="syncExpression()" placeholder="0">
+    <div class="buttons">
+
+        <button onclick="appendToDisplay('(')" class="sci">(</button>
+        <button onclick="appendToDisplay(')')" class="sci">)</button>
+        <button onclick="appendToDisplay('π')" class="sci">π</button>
+        <button onclick="appendToDisplay('e')" class="sci">e</button>
+
+        <button onclick="applyFunction('sin')" class="sci">sin</button>
+        <button onclick="applyFunction('cos')" class="sci">cos</button>
+        <button onclick="applyFunction('tan')" class="sci">tan</button>
+        <button onclick="applyFunction('sqrt')" class="sci">√</button>
+
+        <button onclick="applyFunction('log')" class="sci">log</button>
+        <button onclick="applyFunction('ln')" class="sci">ln</button>
+        <button onclick="applyFunction('square')" class="sci">x²</button>
+        <button onclick="applyFunction('factorial')" class="sci">n!</button>
+
+        <button onclick="allClear()" class="clear">AC</button>
+        <button onclick="percentage()" class="clear">%</button>
+        <button onclick="backspace()" class="clear">⌫</button>
+        <button onclick="appendToDisplay('/')" class="operator">÷</button>
+
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')" class="operator">x</button>
+
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')" class="operator">-</button>
+
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')" class="operator">+</button>
+
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="toggleSign()" class="clear">±</button>
+        <button onclick="calculate()" class="equals">=</button>
+    </div>
+</div>
+
+</body>
+</html>
